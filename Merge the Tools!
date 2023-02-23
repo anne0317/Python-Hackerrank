@@ -1,0 +1,17 @@
+def merge_the_tools(string, k):
+    # your code goes here
+    n = len(string)
+    aux = ''
+    final_list = []
+    s_split = ["".join(string[i: k+i]) for i in range(0, n, k)]
+
+    for part in s_split:
+        for letter in part:
+            if letter not in aux:
+                aux += letter
+            else:
+                continue
+        final_list.append(aux)
+        aux = ''
+    for i in final_list:
+        print(i)
