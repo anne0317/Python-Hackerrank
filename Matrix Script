@@ -1,0 +1,1 @@
+import re;n,m=map(range,map(int,input().split()));a=[input()for _ in n];j="".join;print(re.sub(r"\b\W+\b"," ",j(j(x[i]for x in a)for i in m)))
