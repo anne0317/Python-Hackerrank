@@ -1,0 +1,8 @@
+from itertools import groupby
+
+in_string = input()
+
+keys = [k for k, g in groupby(list(in_string))]
+values = [list(g) for k, g in groupby(list(in_string))]
+
+print(*list(map(lambda x, y:(len(y), int(x)), keys, values)))
